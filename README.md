@@ -2,4 +2,6 @@
 
 Separate static Cloudflare Pages site for the v3 desktop application package.
 
+Production Pages project: `lb-exe-v3.pages.dev`.
+
 Publish the verified `IX-Attendance.zip` build at the repository root. This site must never contain or proxy a v1/v2 application package.
