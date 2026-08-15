@@ -2,7 +2,7 @@
 
 Public download-only repository for the IX Attendance employee desktop application.
 
-- Current release: **v3.2.7**
+- Current release: **v3.2.11**
 - Download host: GitHub Releases
 - Landing page: `lb-exe-v3.pages.dev`
 - Application service: `lb3.ixsupports.net`
