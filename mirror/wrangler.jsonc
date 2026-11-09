@@ -1,0 +1,7 @@
+{
+  "name": "ix-attendance-download-mirror",
+  "main": "index.js",
+  "compatibility_date": "2026-11-09",
+  "workers_dev": true,
+  "r2_buckets": [{"binding":"RELEASES","bucket_name":"ix-attendance-download-mirror"}]
+}
