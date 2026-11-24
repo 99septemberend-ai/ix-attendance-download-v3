@@ -1,12 +1,18 @@
-const NAME = 'IX-Attendance-v3.2.24.zip';
-const KEY = `V3.2.24/${NAME}`;
-const SHA256 = '73a48ead26192384f20dd865105edd044da5273d040cddfabd11ae0131187879';
+const RELEASES = {
+  '3.2.24': {sha256:'73a48ead26192384f20dd865105edd044da5273d040cddfabd11ae0131187879'},
+  '3.2.25': {sha256:'5c402f4ac21cc728c6e366cdd33a75624bedd514283dfa371ed5f5b7a0515bf4'}
+};
+const LATEST = '3.2.25';
 export default {
   async fetch(request, env) {
     const path = new URL(request.url).pathname;
+    const version = Object.keys(RELEASES).find(v => path === `/V${v}/IX-Attendance-v${v}.zip` || path === `/IX-Attendance-v${v}.zip`) || LATEST;
+    const NAME = `IX-Attendance-v${version}.zip`;
+    const KEY = `V${version}/${NAME}`;
+    const SHA256 = RELEASES[version].sha256;
     if (path === '/health') {
       const object = await env.RELEASES.head(KEY);
-      return Response.json({ok:!!object,version:'3.2.24',bytes:object?.size||0,sha256:SHA256},{status:object?200:503});
+      return Response.json({ok:!!object,version,bytes:object?.size||0,sha256:SHA256},{status:object?200:503});
     }
     if (!['/',`/${NAME}`,`/${KEY}`].includes(path)) return new Response('Not found',{status:404});
     if (!['GET','HEAD'].includes(request.method)) return new Response('Method not allowed',{status:405,headers:{Allow:'GET, HEAD'}});
