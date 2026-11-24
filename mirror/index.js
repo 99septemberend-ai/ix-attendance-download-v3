@@ -1,8 +1,9 @@
 const RELEASES = {
   '3.2.24': {sha256:'73a48ead26192384f20dd865105edd044da5273d040cddfabd11ae0131187879'},
-  '3.2.25': {sha256:'5c402f4ac21cc728c6e366cdd33a75624bedd514283dfa371ed5f5b7a0515bf4'}
+  '3.2.25': {sha256:'5c402f4ac21cc728c6e366cdd33a75624bedd514283dfa371ed5f5b7a0515bf4'},
+  '3.2.26': {sha256:'fe75e27fad796e0153aa185a4df7be41f1be48795a3da2cd854c2a113c1cf038'}
 };
-const LATEST = '3.2.25';
+const LATEST = '3.2.26';
 
 // Ignore malformed/unsupported ranges, as HTTP permits. Use BigInt so very
 // large valid decimal offsets cannot overflow while checking satisfiability.
