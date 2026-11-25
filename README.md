@@ -1,13 +1,9 @@
 # IX Attendance V3 Downloads
 
-Public download-only repository for the IX Attendance employee desktop application.
+Current release: **v3.2.27**.
 
-- Current release: **v3.2.17**
-- Download host: GitHub Releases
-- Landing page: `lb-exe-v3.pages.dev`
-- Application service: `lb3.ixsupports.net`
+Cloudflare R2 is the primary download; GitHub Releases is the backup. Both distribute the same verified ZIP. Landing page: lb-exe-v3.pages.dev. Application service: lb3.ixsupports.net.
 
-The Cloudflare Worker, D1 schema, and private desktop source are not stored in
-this repository. V1 and V2 packages must never be published here.
+v3.2.27 removes the blocking Emergency Back confirmation and repeated countdown window raising. It adds controlled UI and handler diagnostics with dated process-specific logs. Login minimum remains3.2.22; new Leave requires3.2.25+. Existing Back recovery remains available.
 
-Existing supported versions remain accepted until September 18, 2026 at 16:00 GMT+8. After that cutoff, v3.2.17 is required. This release adds new-member registration and self-service organization profile editing.
+Private source and Worker configuration are maintained separately. No V1/V2 package is published here.
